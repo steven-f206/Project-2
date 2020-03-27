@@ -34,14 +34,15 @@ var players = [
     },
 ];
 
-// function sendMsg() {
-//     message = document.getElementById('msgBx').value;
-//     document.getElementById('msgBx').value = "";
-// }
 
-// function getMsg() {
-//     return message;
-// }
+function getMsg() {
+    return message;
+}
+
+function setMsg(newMsg) {
+    message = newMsg;
+    return;
+}
 
 function getPlyrs() {
     return players;
@@ -235,7 +236,7 @@ class StartScene extends Phaser.Scene {
         this.username.y = this.player.y - 175;
         this.message.x = this.player.x - 50;
         this.message.y = this.player.y - 125;
-        // this.message.text = getMsg();
+        this.message.text = getMsg();
 
         if (this.cursors.space.isDown && this.player.y == 576) {
             jump = -800;
