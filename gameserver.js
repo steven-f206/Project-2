@@ -1,16 +1,25 @@
 let express = require("express");
-const socket = require('socket.io');
+const session = require("express-session");
+const socket = require("socket.io");
+const passport = require("./config/passport");
+const db = require("./models");
 
 let PORT = process.env.PORT || 1337;
-
 let app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-let routes = require("./routes/gamecontroller.js");
+app.use(
+  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+);
+app.use(passport.initialize());
+app.use(passport.session());
 
+require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
+let routes = require("./routes/gamecontroller.js");
 app.use(routes);
 
 const server = app.listen(PORT, () => {
@@ -19,11 +28,10 @@ const server = app.listen(PORT, () => {
 
 const io = socket(server);
 
-io.on('connection', function (socket) {
-    console.log('made socket connection', socket.id);
-    
-    socket.on('chat', function (data) {
-        io.sockets.emit('chat', data);
-    });
+io.on("connection", function(socket) {
+  console.log("made socket connection", socket.id);
 
+  socket.on("chat", function(data) {
+    io.sockets.emit("chat", data);
+  });
 });

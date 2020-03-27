@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "gameserver.js",
-<<<<<<< HEAD
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "init": "^0.1.2",
+    "mysql2": "^2.1.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^5.21.5",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {},
-=======
->>>>>>> 832ec96aaf1386aeea8b66423f02622dcac7f781
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,22 +22,10 @@
     "type": "git",
     "url": "git+https://github.com/steven-f206/Project-2.git"
   },
-<<<<<<< HEAD
   "author": "",
-=======
-  "author": "Matthew, Minjin, Steven",
->>>>>>> 832ec96aaf1386aeea8b66423f02622dcac7f781
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/steven-f206/Project-2/issues"
   },
-<<<<<<< HEAD
   "homepage": "https://github.com/steven-f206/Project-2#readme"
-=======
-  "homepage": "https://github.com/steven-f206/Project-2#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "socket.io": "^2.3.0"
-  }
->>>>>>> 832ec96aaf1386aeea8b66423f02622dcac7f781
 }
