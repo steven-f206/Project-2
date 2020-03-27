@@ -17,5 +17,5 @@ sendButton.click(function () {
 
 socket.on('chat', function (data) {
     messagesend.empty();
-    output.append($('<p style="color: white">').text(data.messagesend));
+    output.append($('<p style="color: white; text-align: left;">').text(new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds() + " | " + data.messagesend));
 });
