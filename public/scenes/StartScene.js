@@ -254,12 +254,12 @@ class StartScene extends Phaser.Scene {
             this.player.y = 576;
         }
 
-        // let val = document.getElementById('msgBx').value;
+        let val = document.getElementById('message').value;
 
-        // if(this.cursors.space.isDown) {
-        //     document.getElementById('msgBx').value = val + " ";
-        //     document.getElementById('msgBx').value = document.getElementById('msgBx').value.replace(/  +/g, ' ');
-        // }
+        if(this.cursors.space.isDown) {
+            document.getElementById('message').value = val + " ";
+            document.getElementById('message').value = document.getElementById('message').value.replace(/  +/g, ' ');
+        }
 
     }
     
