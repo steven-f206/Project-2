@@ -34,14 +34,15 @@ var players = [
     },
 ];
 
-// function sendMsg() {
-//     message = document.getElementById('msgBx').value;
-//     document.getElementById('msgBx').value = "";
-// }
 
-// function getMsg() {
-//     return message;
-// }
+function getMsg() {
+    return message;
+}
+
+function setMsg(newMsg) {
+    message = newMsg;
+    return;
+}
 
 function getPlyrs() {
     return players;
@@ -235,7 +236,7 @@ class StartScene extends Phaser.Scene {
         this.username.y = this.player.y - 175;
         this.message.x = this.player.x - 50;
         this.message.y = this.player.y - 125;
-        // this.message.text = getMsg();
+        this.message.text = getMsg();
 
         if (this.cursors.space.isDown && this.player.y == 576) {
             jump = -800;
@@ -253,12 +254,12 @@ class StartScene extends Phaser.Scene {
             this.player.y = 576;
         }
 
-        // let val = document.getElementById('msgBx').value;
+        let val = document.getElementById('message').value;
 
-        // if(this.cursors.space.isDown) {
-        //     document.getElementById('msgBx').value = val + " ";
-        //     document.getElementById('msgBx').value = document.getElementById('msgBx').value.replace(/  +/g, ' ');
-        // }
+        if(this.cursors.space.isDown) {
+            document.getElementById('message').value = val + " ";
+            document.getElementById('message').value = document.getElementById('message').value.replace(/  +/g, ' ');
+        }
 
     }
     

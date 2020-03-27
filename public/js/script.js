@@ -14,17 +14,9 @@ sendButton.click(function() {
   messagesend.val("");
 });
 
-socket.on("chat", function(data) {
-  messagesend.empty();
-  output.append(
-    $('<p style="color: white; text-align: left;">').text(
-      new Date().getHours() +
-        ":" +
-        new Date().getMinutes() +
-        ":" +
-        new Date().getSeconds() +
-        " | " +
-        data.messagesend
-    )
-  );
+socket.on('chat', function (data) {
+    messagesend.empty();
+    output.append($('<p style="color: white; text-align: left;">').text(new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds() + " | " + data.messagesend));
+    output.scrollTop(output[0].scrollHeight);
+    setMsg(data.messagesend);
 });
