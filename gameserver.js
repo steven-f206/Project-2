@@ -1,5 +1,5 @@
 let express = require("express");
-const socket = require('socket.io');
+const socket = require("socket.io");
 
 let PORT = process.env.PORT || 1337;
 
@@ -19,11 +19,10 @@ const server = app.listen(PORT, () => {
 
 const io = socket(server);
 
-io.on('connection', function (socket) {
-    console.log('made socket connection', socket.id);
-    
-    socket.on('chat', function (data) {
-        io.sockets.emit('chat', data);
-    });
+io.on("connection", function(socket) {
+  console.log("made socket connection", socket.id);
 
+  socket.on("chat", function(data) {
+    io.sockets.emit("chat", data);
+  });
 });
