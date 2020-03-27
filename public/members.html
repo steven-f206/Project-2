@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <!-- Socket io -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Phaser -->
+    <script src="./js/phaser.min.js"></script>
+    <script src="./scenes/StartScene.js"></script>
+    <script src="./js/game.js"></script>
+
+    <style>
+      #messager {
+        position: absolute;
+        bottom: 720;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 20px;
+        text-align: center;
+        font-size: 20px;
+      }
+
+      input {
+        border-radius: 20px;
+        padding: 5px;
+        height: 25px;
+      }
+
+      button {
+        border-radius: 20px;
+        font-size: 20px;
+        height: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="messager">
+      <div
+        id="output"
+        style="overflow:hidden; overflow-y: scroll; height: 300px;"
+      ></div>
+      <h3 style="color:white">Send a message!</h3>
+      <input type="text" id="message" />
+      <button id="send">SEND</button>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
