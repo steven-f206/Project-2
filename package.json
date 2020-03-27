@@ -1,0 +1,23 @@
+{
+  "name": "project-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gameserver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steven-f206/Project-2.git"
+  },
+  "author": "Matthew, Minjin, Steven",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steven-f206/Project-2/issues"
+  },
+  "homepage": "https://github.com/steven-f206/Project-2#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
