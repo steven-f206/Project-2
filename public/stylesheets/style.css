@@ -1,0 +1,23 @@
+body {
+  font-family: "Press Start 2P", cursive;
+  background-image: url("../img/shovel-knight.jpg");
+  background-size: cover;
+}
+
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+
+.topheader {
+  text-align: center;
+  color: white;
+}
+
+.secondheader {
+  color: white;
+}
+
+.here {
+  color: rgb(57, 138, 230);
+}

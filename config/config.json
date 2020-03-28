@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Phoenix1",
+    "password": "kproot012",
     "database": "chatroomDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
