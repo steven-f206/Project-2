@@ -1,3 +1,3 @@
-create database chatroom_db;
+create database chatroomDB;
 
-use chatroom_db;
+use chatroomDB;
